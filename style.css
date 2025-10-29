@@ -58,6 +58,7 @@ body {
 .header .left {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 18px;
 }
 
@@ -73,15 +74,11 @@ body {
   font-size: 20px;
 }
 
-.nav-link.active {
-  font-weight: 700;
-}
-
 .divider {
   color: #888;
 }
 
-/* ---------- Grid Layout ---------- */
+/* ---------- Main Grid ---------- */
 .main {
   padding: 45px 55px;
 }
@@ -94,7 +91,8 @@ body {
 }
 
 .card {
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   background-color: #f6f6f6;
   border-radius: 2px;
   overflow: hidden;
@@ -134,7 +132,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
   padding: 25px 0;
   border-top: 1px solid #e5e5e5;
   margin-top: 40px;
@@ -153,4 +152,83 @@ body {
 .footer-link.active {
   background: #000;
   color: #fff;
+}
+
+/* ---------- Responsive Media Queries ---------- */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .main {
+    padding: 35px 40px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 25px;
+  }
+
+  .logo {
+    width: 65px;
+    height: 45px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .main {
+    padding: 25px 20px;
+  }
+
+  .footer {
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .footer-link {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .header {
+    padding: 15px 18px;
+  }
+
+  .main {
+    padding: 20px 15px;
+  }
+
+  .card-text h3 {
+    font-size: 14px;
+  }
+
+  .card-text p {
+    font-size: 13px;
+  }
 }
