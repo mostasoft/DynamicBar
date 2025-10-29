@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Tabs with Loading</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="left">
+      <img src="/Images/Screenshot 2025-10-29 065804.png" alt="logo" class="logo">
+      <a href="#" class="nav-link">Student Help</a>
+      <span class="divider">|</span>
+      <a href="#" id="activeSection" class="nav-link active">Bars</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div id="cardGrid" class="grid"></div>
+  </main>
+
+  <!-- Footer Tabs -->
+  <footer class="footer">
+    <a href="#" class="footer-link">Essentials</a>
+    <a href="#" class="footer-link">Resources</a>
+    <a href="#" class="footer-link">Viewpoints</a>
+    <a href="#" class="footer-link active">Bars</a>
+    <a href="#" class="footer-link">Sport Centers</a>
+    <a href="#" class="footer-link">Social / Community</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
